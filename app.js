@@ -27,13 +27,13 @@ if (painting == 'Starry Night') {
 
 var backgroungcolor = prompt("what's your favourite color background ? please choose between: red, blue or pink ");
 
-if (painting == 'red') {
+if (backgroungcolor == 'red') {
     document.body.style.backgroundColor = "red";
 
 
-} else if (painting == 'blue') {
+} else if (backgroungcolor == 'blue') {
     document.body.style.backgroundColor = "blue";
-} else if (painting == 'pink') {
+} else if (backgroungcolor == 'pink') {
     document.body.style.backgroundColor = "pink";
 } else {
     alert('sorry the back ground collor will not change ');
