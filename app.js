@@ -37,6 +37,8 @@ for (var index = 0; index < numberOfPaintings; index++) {
 }
 
 document.write(result);
+document.write('<h2>' + "Number of paintings is:" + numberOfPaintings + '</h2>');
+
 
 
 
