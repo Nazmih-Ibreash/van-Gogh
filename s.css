@@ -2,7 +2,21 @@ p
 {
     line-height: 35px;
 }
+
 *
 {
     margin-left: 5px;
+}
+
+div
+{
+    padding: 5px;
+}
+
+footer p
+{
+    
+    text-align: center ;
+    background-color: #282846;
+    color: white;
 }
