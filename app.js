@@ -1,43 +1,49 @@
 
-alert("welcome to van's gallery");
-
-//var age = 23;
-
-//console.log(age);//
+///////////////////////////////////////////////////////////
+//************    Welcome Message Function  *********/////
 
 var username = prompt("what's your name?");
 
-alert("Hello " + username);
-
-//document.write('<h3>' + "Hello" + username + '</h3>');
-
-var painting = prompt("what's your favourite van's painting? please choose between: S -> Starry Night, Irises I -> or W -> Wheatfield ");
-
-while (painting !== "S" && painting !== "I" && painting !== "W") {
-    var painting = prompt("Make sure to choose between: S -> Starry Night, Irises I -> or W -> Wheatfield ");
+function welcomeMessage(name) {
+    alert("welcome " + name + " to van's gallery");
 }
+welcomeMessage(username);
 
-var numberOfPaintings = prompt("How many times you want us to view your favourite painting?");
 
-var result = '';
 
-var p = '';
-
-if (painting == 'S') {
-    p = ('<img src="1.jpg" >');
-} else if (painting == 'I') {
-    p = ('<img src="4.jpg" >');
-} else if (painting == 'W') {
-    p = ('<img src="5.jpg" >');
+///////////////////////////////////////////////////////////////////
+//************    favourite van's painting Function  *********/////
+var painting = prompt("what's your favourite van's painting? please choose between: S -> Starry Night, I -> Irises  or W -> Wheatfield ");
+var getFavPainting = function () {
+    while (painting !== "S" && painting !== "I" && painting !== "W") {
+        painting = prompt("Make sure to choose between: S -> Starry Night, Irises I -> or W -> Wheatfield ");
+    }
 }
+getFavPainting();
 
-for (var index = 0; index < numberOfPaintings; index++) {
-
-    result += p;
+///////////////////////////////////////////////////////////////////
+//************    number of paintings Function  *********/////////
+function numOfPaintings() {
+    var numberOfPaintings = prompt("How many times you want us to view your favourite painting?");
+    var result = '';
+    var p = '';
+    if (painting == 'S') {
+        p = ('<img src="photos/starryNight.jpg" >');
+    } else if (painting == 'I') {
+        p = ('<img src="photos/irises.jpg" >');
+    } else if (painting == 'W') {
+        p = ('<img src="photos/field.jpg" >');
+    }
+    for (var index = 0; index < numberOfPaintings; index++) {
+        result += p;
+    }
+    document.write('<h2>' + "Your favourite painting is:" + '</h2>');
+   
+    document.write(result);
+    document.write('<h2>' + "Number of paintings is:" + numberOfPaintings + '</h2>');
 }
+numOfPaintings();
 
-document.write(result);
-document.write('<h2>' + "Number of paintings is:" + numberOfPaintings + '</h2>');
 
 
 
@@ -54,3 +60,7 @@ if (backgroungcolor == 'red') {
 } else {
     alert('sorry the back ground collor will not change ');
 }*/
+
+
+//alert("Hello " + username);
+//document.write('<h3>' + "Hello" + username + '</h3>');
